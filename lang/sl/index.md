@@ -9,14 +9,13 @@ Semantične verzije 2.0.0
 Povzetek
 --------
 
-Dane številke verzij GLAVNA.MANJŠA.POPRAVEK povečajte:
+Številke MAJOR.MINOR.PATCH povečajte:
 
-1. GLAVNO verzijo, ko naredite nazaj nezdružljive spremembe API-ja,
-1. MANJŠO verzijo, ko dodate funkcionalnost na način združljivosti za
-   nazaj in
-1. POPRAVEK verzije, ko naredite popravke hroščev z združljivostjo za nazaj.
+1. MAJOR, ko naredite s trenutno verzijo nezdružljive spremembe API-ja,
+1. MINOR, ko dodate funkcionalnost na način, ki je združljiv s trenutno verzijo,
+1. PATCH, ko naredite popravke hroščev, ki ne vplivajo na združljivost.
 
-Dodatne oznake za pred-izdaje in metapodatki gradnje so na voljo kot razširitve v obliki GLAVNA.MANJŠA.POPRAVEK.
+Dodatno oznako predizdaje in metapodatke lahko dodate kot pripono nizu MAJOR.MINOR.PATCH.
 
 Uvod
 ----
