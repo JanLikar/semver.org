@@ -251,14 +251,15 @@ niza.
 O projektu
 ----------
 
-Specifikacija sementičnih verzij je avtorizirana s strani [Toma
-Preston-Werner-ja](http://tom.preston-werner.com), izumitelja Gravatarjev in
+Avtor specifikacije semantičnih verzij je [Tom
+Preston-Werner](http://tom.preston-werner.com), izumitelj Gravatarja in
 soustanovitelja GitHub-a.
 
 Slovenski prevod so prispevali:
 
 * [Peter Kokot](https://github.com/peterkokot)
 * [Aleš Šarkanj](https://github.com/alsar)
+* [Jan Likar](https://github.com/JanLikar)
 
 Če želite pustiti povratne informacije, prosimo, da [odprete vprašanje na
 GitHub-u](https://github.com/mojombo/semver/issues).
