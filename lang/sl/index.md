@@ -169,8 +169,8 @@ Pogosta vprašanja
 
 ### Kako ravnam z revizijami v 0.y.z začetni fazi razvoja?
 
-Najenostavnejše narediti je začeti vašo začetno razvojno izdajo pri 0.1.0
-in nato povečevati manjše verzije za vsako naknadno izdajo.
+Najenostavneje je prvo izdajo označiti z 0.1.0 in ob
+vsaki nadaljnji izdaji povečati število MINOR.
 
 ### Kako vem, kdaj izdati 1.0.0?
 
