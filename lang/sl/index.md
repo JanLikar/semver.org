@@ -60,62 +60,58 @@ Ključne besede "MORA", "NE SME", "ZAHTEVANO", "BO", "NE BO", "BI MORALO",
 interpretira, kot so opisane v [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
 1. Programska oprema, ki uporablja semantične verzije MORA določiti javni API. Ta API
-je lahko določen v sami kodi ali obstaja striktno v dokumentaciji.
-Kakorkoli je končan, bi moral biti točen in celovit.
+je lahko določen v kodi sami ali pa obstaja striktno v dokumentaciji.
+Ko je končan, mora biti točen in celovit.
 
 1. Običajna številka verzije MORA biti oblike X.Y.Z, kjer so X, Y, in Z
 pozitivna cena števila in NE SMEJO vsebovati vodilnih ničel. X je
-glavna verzija, Y je manjša verzija in Z je verzija popravka.
-Vsak element se MORA povečati numerično. Na primer: 1.9.0 -> 1.10.0 -> 1.11.0.
+glavna(MAJOR) verzija, Y je manjša(MINOR) verzija in Z je verzija popravka(PATCH).
+Vsak element se MORA povečevati numerično. Na primer: 1.9.0 -> 1.10.0 -> 1.11.0.
 
-1. Ko je enkrat paket verzije izdan, se vsebina te verzija
+1. Ko je paket verzije enkrat izdan, se vsebina te verzija
 NE SME spremeniti. Kakršnekoli spremembe MORAJO biti izdane kot nova verzija.
 
-1. Glavna verzija nič (0.y.z) je za začetni razvoj. Karkoli se lahko spremeni
-kadarkoli. Javni API ne bi smel biti smatran za stabilnega.
+1. Glavna verzija nič (0.y.z) je namenjena prvotnemu razvoju - karkoli se lahko spremeni
+kadarkoli. Javnega API takega paketa se NE SME smatrati kot stabilnega.
 
-1. Verzija 1.0.0 definira javni API. Način, kako je številka verzija
-povečana za to izdajo je odvisno od tega javnega API-ja in kako se
-spremeni.
+1. Verzija 1.0.0 definira javni API. Kako se številka verzije
+povečuje, je odvisno od javnega API-ja in kako se le-ta spreminja.
 
-1. Verzija popravka Z (x.y.Z | x > 0) MORA biti povečana, če so predstavljeni samo nazaj
-združljivi popravki hroščev. Popravek hrošča je definiran kot notranja
+1. Verzija popravka Z (x.y.Z | x > 0) MORA biti povečana, če so izdani samo
+popravki, ki so združljivi s prejšnjo različico. Popravek je definiran kot notranja
 sprememba, ki popravi nepravilno obnašanje.
 
-1. Manjša verzija Y (x.Y.z | x > 0) MORA biti povečana, če so nove nazaj
-združljive funkcionalnosti predstavljene javnemu API-ju. MORA biti
-povečana, če je katerakoli funkcionalnost javnega API-ja označena za opuščeno. LAHKO
-je povečana, če so znatna nova funkcionalnost ali izboljšave predstavljene
-znotraj privatne kode. LAHKO vključuje spremembe nivoja popravka. Verzija popravka
-MORA biti ponastavljena na nič, ko je manjša verzija povečana.
+1. Manjša verzija Y (x.Y.z | x > 0) MORA biti povečana, če so javnemu API-ju
+dodane funkcionalnosti, tako da so spremembe združljive s prejšnjo različico.
+MORA biti povečana, če je katerakoli funkcionalnost javnega API-ja označena kot "opuščena".
+LAHKO je povečana, če so znotraj privatne kode vpeljane nove funkcionalnosti ali izboljšave.
+LAHKO vključuje spremembe, ki bi navadno terjale povečanje verzije popravka.
+Verzija popravka MORA biti ponastavljena na nič, ko je manjša verzija povečana.
 
-1. Glavna verzija X (X.y.z | X > 0) MORA biti povečevana, če je kakršnakoli nazaj
-nezdružljiva sprememba predstavljena javnemu API-ju. LAHKO vključuje spremembe
-manjše verzije in verzije popravka. Manjša verzija in popravek MORATA biti ponastavljena na 0, ko je
+1. Glavna verzija X (X.y.z | X > 0) MORA biti povečevana, če je v javen API vpeljana kakršnakoli
+nezdružljiva sprememba. LAHKO vključuje spremembe, ki bi navadno terjale povečanje manjše verzije
+in verzije popravka. Manjša verzija in popravek MORATA biti ponastavljena na 0, ko je
 glavna verzija povečana.
 
-1. Verzija pred-izdaje je LAHKO označena z dodajanjem vezaja in
-serije s pikami ločenih identifikatorjev, ki jim takoj sledi verzija
-popravka. Identifikatorji MORAJO biti sestavljeni iz samo alfanumeričnih ASCII-jev in vezaja
-[0-9A-Za-z-]. Identifikatorji NE SMEJO biti prazni. Numerični identifikatorji NE
-SMEJO vključevati vodilnih ničel. Verzije pred-izdaj imajo manjši
-vrstni red, ko povezana običajna verzija. Verzija pred-izdaje
-označuje, da je verzija nestabilna in lahko ne zadosti
-namenjenim zahtevam združljivosti, kot je označeno z njihovimi povezanimi
-normalnimi verzijami. Na primer: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+1. Verzija predizdaje je LAHKO označena z dodajanjem vezaja in
+serije s pikami ločenih oznak. Oznake MORAJO biti sestavljene samo iz alfanumeričnih znakov
+nabora ASCII in vezaja [0-9A-Za-z-]. Identifikatorji NE SMEJO biti prazni.
+Numerični identifikatorji NE SMEJO vključevati vodilnih ničel. Verzije predizdaj po urejenosti
+manjše od običajnih verzij. Verzija predizdaje označuje, da je verzija nestabilna in mogoče ne zadosti
+zahtevam združljivosti, ki jih pripisujemo pripadajočim normalnim verzijam.
+Primeri verzij predizdaj: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
-1. Metapodatki gradnje so LAHKO označeni z dodajanjem znaka plus in serije pik
-ločenih identifikatorjev, ki jim takoj sledi popravek ali verzija pred-izdaje.
-Identifikatorji MORAJO biti sestavljeni iz samo alfanumeričnih ASCII-jev in vezajev [0-9A-Za-z-].
-Identifikatorji NE SMEJO biti prazni. Podatki metagradnje BI MORALI biti ignorirani, ko se določa
-vrstni red verzij. Zato dve verziji, ki se razlikujeta samo v metapodatkih gradnje,
-imata enak vrstni red. Na primer: 1.0.0-alpha+001, 1.0.0+20130313144700,
-1.0.0-beta+exp.sha.5114f85.
+1. Metapodatki so LAHKO označeni z dodajanjem znaka plus in serije s pikami
+ločenih oznak, ki sledijo verziji popravka ali verziji predizdaje.
+Oznake MORAJO biti sestavljene samo iz alfanumeričnih znakov nabora ASCII in vezajev [0-9A-Za-z-].
+Oznake NE SMEJO biti prazne. Metapodatki BI MORALI biti ignorirani, ko se določa
+vrstni red verzij. Zato sta dve verziji, ki se razlikujeta samo v metapodatkih,
+v vrstnem redu na istem mestu. Primeri verzij z dodanimi metapodatki: 1.0.0-alpha+001,
+1.0.0+20130313144700, 1.0.0-beta+exp.sha.5114f85.
 
 1. Vrstni red se sklicuje na to, kako so verzije primerjane druga z drugo, ko so urejene.
 Vrstni red MORA biti izračunan z ločitvijo verzije v glavno, manjšo, popravek
-in identifikator pred-izdaje v tem vrstnem redu (metapodatki gradnje ne pašejo
+in identifikator predizdaje v tem vrstnem redu (metapodatki gradnje ne pašejo
 v vrstni red). Vrstni red je določen s prvo razliko, ko
 primerjate vsako od teh identifikatorjev iz leve proti desni kot sledi: Verzije glavna, manjša
 in popravek so vedno primerjane s številkami. Na primer: 1.0.0 < 2.0.0 <
