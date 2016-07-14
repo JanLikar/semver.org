@@ -184,14 +184,13 @@ Verzija z MAJOR številko enako nič je namenjena hitremu razvoju. Če spreminja
 vsakodnevno, bi morali biti še vedno na verziji 0.y.z. Če razvijate naslednjo MAJOR
 verzijo programske opreme, bi morali delati na ločeni veji projekta.
 
-### Če tudi najmanjša nazaj nezdružljiva sprememba javnega API-ja zahteva povečanje glavne verzije, ali ne bom potem končal pri verziji 42.0.0 zelo hitro?
+### Če že najmanjša nezdružljiva sprememba javnega API-ja zahteva povečanje MAJOR verzije, ali ne bom zelo hitro končal pri verziji 42.0.0?
 
-To je vprašanje odgovornega razvoja in vpogleda vnaprej. Nezdružljive
-spremembe ne bi smele biti predstavljene ohlapno v programsko opremo, ki ima
-veliko odvisne kode. Cena, ki mora nastati za nadgradnjo, je lahko pomembna.
-Povečanje glavnih verzij za izdajo nekompatibilnih sprememb pomeni, da boste
-premislili skozi vpliv vaših sprememb in ocenili vpleteno razmerje
-cena/korist.
+To je vprašanje odgovornega razvoja in previdnega načrtovanja. Nezdružljivih
+sprememb se ne sme malomarno vpeljevati v programsko opremo, od katere
+je odvisnih veliko uporabnikov. To, da morate povečati MAJOR verzijo za
+izdajo nezdružjivih sprememb pomeni, da boste bolj pozorni na vpliv vaših
+sprememb.
 
 ### Dokumentiranje celotnega javnega API-ja terja preveč dela!
 
