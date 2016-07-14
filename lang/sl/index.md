@@ -174,16 +174,15 @@ vsaki nadaljnji izdaji povečati število MINOR.
 
 ### Kako vem, kdaj izdati 1.0.0?
 
-Če je vaša programska oprema uporabljena v produkciji, bi morala verjeno že biti
-1.0.0. Če imate stabilni API od katerega so postali uporabniki odvisni, bi morali
-imeti 1.0.0. Če vas skrbi veliko o združljivosti za nazaj, bi morali verjetno
-že biti na 1.0.0.
+Če se vašo programska oprema uporablja v produkciji, bi morala verjetno že biti
+označena z 1.0.0. Če imate stabilen API od katerega so uporabniki odvisni, bi morali
+imeti 1.0.0. Če vas skrbi združljivost, bi morali verjetno že biti na 1.0.0.
 
-### Ali to ne odvrača hitrega razvoja in hitrih interacij?
+### Ali to ne odvrača hitrega razvoja?
 
-Glavna verzija nič je vse o hitrem razvoju. Če spreminjate API
-vsak dan, bi morali ali biti še vedno na verziji 0.y.z ali na ločeni
-razvojni veji delati na naslednji glavni verziji.
+Verzija z MAJOR številko enako nič je namenjena hitremu razvoju. Če spreminjate API
+vsakodnevno, bi morali biti še vedno na verziji 0.y.z. Če razvijate naslednjo MAJOR
+verzijo programske opreme, bi morali delati na ločeni veji projekta.
 
 ### Če tudi najmanjša nazaj nezdružljiva sprememba javnega API-ja zahteva povečanje glavne verzije, ali ne bom potem končal pri verziji 42.0.0 zelo hitro?
 
