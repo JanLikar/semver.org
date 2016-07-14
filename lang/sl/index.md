@@ -194,23 +194,21 @@ Povečanje glavnih verzij za izdajo nekompatibilnih sprememb pomeni, da boste
 premislili skozi vpliv vaših sprememb in ocenili vpleteno razmerje
 cena/korist.
 
-### Dokumentiranje celotnega javnega API-ja je preveč dela!
+### Dokumentiranje celotnega javnega API-ja terja preveč dela!
 
-Vaša odgovornost kot profesionalnega razvijalca je, da ustrezno dokumentirate
-programsko opremo, ki je nameravana za uporabo s strani drugih. Upravljanje kompleksnosti programske opreme je
-zelo pomemben del, da obdržite projekt učinkovit in to narediti je težko, če
-nihče ne ve, kako uporabiti vašo programsko opremo ali katere metode so varne za klicanje. Na
-dolgi rok semantične verzije in vztrajanje na dobro definiranem javnem
-API-ju lahko obdrži poganjanje vsakogar in vsega gladko.
+Kot profesionalni razvijalec programske opreme ste odgovorni, da ustrezno dokumentirate
+programsko opremo, ki je namenjana, da jo uporabljajo tudi drugi. Upravljanje kompleksnosti
+predstavlja zelo pomemben del ohranjanja učinkovitosti projekta. To je težavna naloga,
+če nihče ne ve, kako uporabljati vašo programsko opremo in katere metode so varne za klicanje.
+Uporaba semantičnih verzij in vztrajanje pri dobro definiranem javnem API-ju, lahko zagotovi,
+da bo vaš projekt dolgoročno lahko vzdrževati.
 
-### Kaj narediti, če ponesreči izdam nazaj nezdružljivo spremembo kot manjšo verzijo?
+### Kaj narediti, če ponesreči izdam nezdružljivo spremembo?
 
-Kakor hitro se zaveste, da ste prelomili specifikacijo semantičnih verzij, popravite
-problem in izdajte novo manjšo verzijo, ki popravi problem in
-povrne združljivost za nazaj. Tudi pod temi okoliščinami, ni
-sprejemljivo spreminjati verzij izdaj. Če je primerno,
-dokumentirajte kršeno izdajo in obvestite vaše uporabnike o problemu, da so
-seznanjeni o kršeni izdaji.
+Kakor hitro se zaveste, da ste prekršili pravila semantičnih verzij, popravite napako in
+izdajte različico, ki povrne združljivost, ter ima novo oznako verzije. Tudi v teh
+okoliščinah, ni sprejemljivo spreminjati že izdane kode. Če je primerno,
+dokumentirajte svojo napako in obvestite uporabnike o napačni izdaji.
 
 ### Kaj naj naredim, če posodobim svoje lastne odvisnosti brez spremembe javnega API-ja?
 
