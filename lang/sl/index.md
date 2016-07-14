@@ -241,11 +241,11 @@ na mestu. Preden v celoti odstranite funkcionalnost v novi glavni izdaji
 bi morala biti vsaj ena manjša izdaja, ki vsebuje opuščenost, da
 lahko uporabniki gladko preidejo na nov API.
 
-### Ali ima semver omejitev velikosti na nizu verzije?
+### Ali ima semver omejitev dolžine niza verzije?
 
-Ne, vendar uporabite dobro presojo. Na primer verzija z 255 dolgim nizom je verjetno pretiravanje.
-Tudi določeni sistemi lahko nalagajo njihove lastne omejitve na velikosti
-niza.
+Ne, vendar uporabite presojo. Uporaba oznake verzije, sestavljene iz 255
+znakov dolgega niza, je najverjetneje pretiravanje.
+Kljub temu, imajo lahko nekateri sistemi omejeno dolžino niza.
 
 O projektu
 ----------
